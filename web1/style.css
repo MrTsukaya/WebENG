@@ -1,0 +1,42 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(235, 230, 230);
+}
+div{
+    position: absolute;
+}
+#block1,#block5{
+    left: 400px;
+    height: 50px;
+    width: 600px;
+}
+#block2,#block3,#block4{
+    top: 50px;
+    left: 400px;
+    height: 400px;
+}
+#block2,#block4{
+    width: 100px;
+}
+#block1{
+    top: 0;
+    background-color: aquamarine    ;
+}
+#block2{
+    background-color: lightsalmon;
+}
+#block3{
+    left: 500px;
+    width: 400px;
+    background-color: lightpink;
+}
+#block4{
+    top: 50px;
+    left: 900px;
+    background-color: orange;
+}
+#block5{
+    top: 450px;
+    background-color: lightgreen;
+}
