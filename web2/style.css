@@ -1,0 +1,35 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica;
+}
+header{
+    height: 8px;
+    background-color: #252627;
+}
+footer{
+    background-image: url(zabek.jpg);
+    background-repeat: repeat-x;
+    background-color: #252627;
+    height: 200px;
+}
+#headerBar,
+main{
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#headerBar{
+    display: flex;
+    padding:20px 0px 10px 0px;
+    justify-content: space-between;
+    border-bottom: 1px solid #888;
+}
+
+#headerBar a{
+    text-decoration: none;
+    text-transform: uppercase;
+}
+#newsAll{
+    display: flex;
+}
