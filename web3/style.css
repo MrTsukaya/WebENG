@@ -1,0 +1,99 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("tlo.png");
+    background-size: cover cover;
+    background-position: 50% 0%;
+    font-family: Arial;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: none;
+}
+main{
+    width: 460px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: silver;
+}
+#Logo{
+    margin-top: 20px;
+    width: 20%;
+}
+main h6{
+    color: rgb(136, 135, 135);
+    font-weight:lighter;
+    text-transform: uppercase;
+    font-size: 6px;
+    margin: 0 0 30px 0;
+    word-spacing:5px;
+}
+#image_box{
+    display: flex;
+    background-color: #fff;
+    flex-wrap: wrap;
+    padding: 5px;
+}
+#mirror{
+    display: flex;
+    max-height: 40px;
+    background-color: #fff;
+    padding: 0px 5px 0 5px;
+    transform: scale(1,-1);
+    opacity: 0.1;
+    overflow: hidden;
+}
+#mirror img{
+    width: 100px;
+    margin: 0 5px 10px 5px;
+    max-height: initial;
+    border: 1px solid black;
+    z-index:-2;
+}
+#image_box img{
+    width: 100px;
+    margin: 5px;
+    border: 1px solid black;
+    background-size: cover;
+}
+main span{
+    border-bottom: 1px dotted #819791;
+}
+article{
+    background-color: rgba(42,53,59,0.1);
+    z-index: 3;
+    font-size: 13px;
+    line-height: 32px;
+    text-align:justify;
+    color: #aaa;
+}
+article h5{
+    font-size: 30px;
+    color:#cbd6df;
+    text-align: center;
+    font-weight: 100;
+    padding: 5px;
+    border-bottom: 1px solid #444;
+    margin: 0;
+    
+}
+span:hover{
+    color: #fff;
+}
+article b{
+    font-family:sans-serif;
+    font-weight: normal;
+}
+#mail{
+    margin: 20px;
+    cursor: pointer;
+}
+footer{
+    padding:50px;
+    font-size: 11px;
+    color: #444;
+}
