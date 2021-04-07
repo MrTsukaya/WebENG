@@ -1,0 +1,74 @@
+html,body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family:arial,sans-serif;
+}
+main{
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+#leftbar{
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    color: #fff;
+    width: 150px;
+    height: 100%;
+    background-color: #252a3a;
+    align-items: center;
+}
+#compose{
+    border-radius: 20px;
+    padding: 8px 16px;
+    margin: 16px 0;
+    background-color: #1b98f8;
+    width: fit-content;
+    height: fit-content;
+}
+#leftbar .option{
+    line-height: 30px;
+    align-self: flex-start;
+    margin-left: 25px;
+}
+#leftbar .label{
+    align-self: flex-start;
+    margin-left: 25px;
+    line-height: 30px;
+    justify-content: center;
+}
+#leftbar .square{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 20%;
+    border: 1px solid #000;
+    margin-right: 10px;
+}
+#mailList{
+    width: 350px;
+    height: 100%;
+    border-right:1px solid #ccc;
+}
+#mailList .message{
+    padding: 14px 16px;
+    border-bottom:1px solid #ccc;
+}
+#mailList img{
+    width: 42px;
+    height: 42px;
+    margin-right: 8px;
+    border-radius: 3px;
+}
+.selectedMail{
+    border-left: 6px solid #1b98f8;
+}
+#readMail{
+    width: auto;
+    height: 100%;
+}
+#readMail #mailHeader{
+    
+}
