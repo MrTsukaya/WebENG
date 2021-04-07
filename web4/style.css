@@ -48,15 +48,17 @@ main{
     margin-right: 10px;
 }
 #mailList{
-    width: 350px;
+    width: 350px !important;
     height: 100%;
     border-right:1px solid #ccc;
+    overflow-y: scroll;
 }
 #mailList .message{
     padding: 14px 16px;
     border-bottom:1px solid #ccc;
     display: flex;
     flex-flow: row wrap;
+    cursor: pointer;
 }
 #mailList .message div{
     display: block;
@@ -86,12 +88,16 @@ main{
     border-radius: 3px;
     float: left;
 }
-.selectedMail{
+.notReadMail{
     border-left: 6px solid #1b98f8;
 }
+.activeMail{
+    border-left: 6px solid #e74c3c;
+}
 #readMail{
-    flex-grow: 1;
+    width: calc(100% - 500px);
     height: 100%;
+    word-wrap: break-word;
 }
 #readMail #mailHeader{
     height: 84px;
@@ -101,6 +107,10 @@ main{
 #readMail #mailHeader #titleBig{
     font-size: 32px;
     font-weight: bold;
+    color: #000;
+}
+#readMail #mailHeader #titleSmall{
+    font-size: 16px;
     color: #000;
 }
 #readMail #mailHeader .button{
