@@ -67,16 +67,19 @@ main{
     width: 80%;
 }
 #mailList .message .mailName{
-    font-size: 11px;
+    font-size: 13px;
     font-weight: bold;
-    color: #aaa;
+    color: #999;
 }
 #mailList .message .mailTitle{
-    font-size: 14px;
+    font-size: 16px;
     font-weight: bold;
+    color: #000;
 }
 #mailList .message .mailCont{
-    font-size: 12px;
+    font-size: 13px;
+    color: #000;
+    margin: 7px 0;
 }
 #mailList .message:hover{
     background-color: #eee;
@@ -98,6 +101,7 @@ main{
     width: calc(100% - 500px);
     height: 100%;
     word-wrap: break-word;
+    overflow-y: scroll;
 }
 #readMail #mailHeader{
     height: 84px;

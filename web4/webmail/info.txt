@@ -36,24 +36,24 @@ Lista maili:
 
 --Lewe obramowanie 2. i 3. maila: 6px, #1B98F8
 
-Pole imię nazwisko: 13px, #999, css: text-transformation: uppercase (małe->wielkie litery)
+--Pole imię nazwisko: 13px, #999, css: text-transformation: uppercase (małe->wielkie litery)
 
-Pole tytułowe: 16px, black
+--Pole tytułowe: 16px, black
 
-Pole zajawki maila: 13px, black, margines: 7px 0
+--Pole zajawki maila: 13px, black, margines: 7px 0
 
 
 
 Pole treści maila:
 
-Szerokość: pozostała część okna przeglądarki
+--Szerokość: pozostała część okna przeglądarki
 
-Wysokość: wg treści
+--Wysokość: wg treści
 
-Tytuł: 32px, black
+--Tytuł: 32px, black
 
 Info pod tytułem: 16px, black i #999 i niebieski #1b98f8;
 
-Treść: 16px; margines 16px 0
+--Treść: 16px; margines 16px 0
 
 Przyciski: Reply, Forward, Move to: 16px, #666, margines wewn. 6px 26px
