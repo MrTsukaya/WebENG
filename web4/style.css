@@ -55,20 +55,62 @@ main{
 #mailList .message{
     padding: 14px 16px;
     border-bottom:1px solid #ccc;
+    display: flex;
+    flex-flow: row wrap;
+}
+#mailList .message div{
+    display: block;
+    margin:0;
+    height: fit-content;
+    width: 80%;
+}
+#mailList .message .mailName{
+    font-size: 11px;
+    font-weight: bold;
+    color: #aaa;
+}
+#mailList .message .mailTitle{
+    font-size: 14px;
+    font-weight: bold;
+}
+#mailList .message .mailCont{
+    font-size: 12px;
+}
+#mailList .message:hover{
+    background-color: #eee;
 }
 #mailList img{
     width: 42px;
     height: 42px;
     margin-right: 8px;
     border-radius: 3px;
+    float: left;
 }
 .selectedMail{
     border-left: 6px solid #1b98f8;
 }
 #readMail{
-    width: auto;
+    flex-grow: 1;
     height: 100%;
 }
 #readMail #mailHeader{
-    
+    height: 84px;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+}
+#readMail #mailHeader #titleBig{
+    font-size: 32px;
+    font-weight: bold;
+    color: #000;
+}
+#readMail #mailHeader .button{
+    padding: 7px 15px 7px 15px;
+    width: fit-content;
+    height: fit-content;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    font-size: 12px;
+}
+#readMail #mailContent{
+    padding: 16px;
 }
