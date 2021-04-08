@@ -31,7 +31,11 @@ main{
 #leftbar .option{
     line-height: 30px;
     align-self: flex-start;
-    margin-left: 25px;
+    padding-left: 25px;
+    width: calc(100% - 25px);
+}
+#leftbar .option:hover{
+    background-color: #464e66; 
 }
 #leftbar .label{
     align-self: flex-start;
@@ -98,7 +102,7 @@ main{
     border-left: 6px solid #e74c3c;
 }
 #readMail{
-    width: calc(100% - 500px);
+    width: 100%;
     height: 100%;
     word-wrap: break-word;
     overflow-y: scroll;
@@ -166,4 +170,45 @@ main{
 }
 #readMail #mailContent{
     padding: 16px;
+}
+#mail{
+    width: calc(100% - 150px);
+    display: flex;
+    flex-direction: row;
+}
+
+@media only screen and (max-width: 1219px){
+    #readMail{
+        width: calc(100% - 350px);
+    }
+    #readMail #mailHeader #titleBig{
+        font-size: 20px;
+    }
+    #mailList{
+        width: 350px !important;
+    }
+}
+@media only screen and (max-width: 1060px){
+    #mail{
+        flex-direction: column;
+    }
+    #readMail, #mailList{
+        width: 100% !important;
+    }
+    #mailList{
+        height: 400px;
+    }
+}
+@media only screen and (max-width: 700px){
+    #leftbar{
+        width:100%;
+        height: fit-content;
+        padding: 40px 0 40px 0;
+    }
+    main{
+        flex-wrap: wrap;
+    }
+    #mail{
+        width: 100%;
+    }
 }

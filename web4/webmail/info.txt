@@ -52,8 +52,8 @@ Pole treści maila:
 
 --Tytuł: 32px, black
 
-Info pod tytułem: 16px, black i #999 i niebieski #1b98f8;
+--Info pod tytułem: 16px, black i #999 i niebieski #1b98f8;
 
 --Treść: 16px; margines 16px 0
 
-Przyciski: Reply, Forward, Move to: 16px, #666, margines wewn. 6px 26px
+--Przyciski: Reply, Forward, Move to: 16px, #666, margines wewn. 6px 26px
