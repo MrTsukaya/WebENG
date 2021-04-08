@@ -17,8 +17,11 @@ function check(x){
     }*/
     if(!ifActive){
         for(let i=0;i<howMany.length;i++)
+        {
             howMany[i].classList.remove("activeMail");
+        }
         x.classList.add("activeMail");
+        document.getElementById("tS").classList.add("tS");
         let temp = 0;
 
         for(let j=0;j<emails.length;j++)
@@ -27,6 +30,9 @@ function check(x){
         
         console.log(temp);
         mailContent.innerHTML = emails[temp].content;
+        document.getElementById("titleBig").innerHTML = emails[temp].title;
+        document.getElementById("tS").innerHTML = emails[temp].firstName+" "+emails[temp].lastName;
+        document.getElementById("tSd").innerHTML = emails[temp].time;
     }
     unreadCounter.innerHTML = "("+unreadMessages+")";
 }
@@ -36,6 +42,8 @@ window.onload = ()=> {
     let x = document.getElementsByClassName('mailName');
     let y = document.getElementsByClassName('mailTitle');
     let z = document.getElementsByClassName('mailCont');
+
+    alert("To check mail content - click on it");
 
     for(let i=0;i<7;i++){
         x[i].innerHTML = (emails[i].firstName+" "+emails[i].lastName).toUpperCase();
