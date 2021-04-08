@@ -43,7 +43,7 @@ window.onload = ()=> {
     let y = document.getElementsByClassName('mailTitle');
     let z = document.getElementsByClassName('mailCont');
 
-    alert("To check mail content - click on it");
+    mailContent.innerHTML = "To check a mail - click on it.<br>Content will be dynamically updated into this section.<br><br><br><br><br>What and what was used for:<br>1. HTML - structure,<br>2. CSS - Layout and responsive view,<br>3. JSON - Storage file,<br>4. JS - Dynamic update, listening to onclick events;<br><br><br><br><br>What's going on here:<br>JS's listening for onlick event at .message box, then he reduces unread messages counter on left bar by 1, removes her 'unread message border' and gives her 'active message border', while displaying content of this message<br><br>Project made by 13390";
 
     for(let i=0;i<7;i++){
         x[i].innerHTML = (emails[i].firstName+" "+emails[i].lastName).toUpperCase();
