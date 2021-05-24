@@ -1,0 +1,153 @@
+/* Effects */
+#sidebar.SlideInOnTop{
+    animation: SlideInOnTop 0.3s ease forwards;
+}
+#container.Reveal{
+    animation: Reveal 0.5s ease forwards;
+}
+#sidebar.Push{
+    animation: PushS 0.5s ease forwards;
+}
+#container.Push{
+    animation: PushC 0.5s ease forwards;
+} 
+#sidebar.SlideAlong{
+    animation: SlideAlongS 0.3s ease forwards;
+}
+#container.SlideAlong{
+    animation: SlideAlongC 0.5s ease forwards;
+}
+/*  */
+#sidebar.ReverseSlideOut{
+    animation: ReverseSlideOutS 0.5s ease forwards;
+}
+#container.ReverseSlideOut{
+    animation: ReverseSlideOutC 0.5s ease forwards;
+}
+.RotatePusher{
+    animation: RotatePusher 1s ease forwards;
+}
+.RotateIn3D{
+    animation: RotateIn3D 1s ease forwards;
+}
+.RotateOut3D{
+    animation: RotateOut3D 1s ease forwards;
+}
+.ScaleDownPusher{
+    animation: ScaleDownPusher 1s ease forwards;
+}
+.ScaleUp{
+    animation: ScaleUp 1s ease forwards;
+}
+.ScaleRotatePusher{
+    animation: ScaleRotatePusher 1s ease forwards;
+}
+.OpenDoor{
+    animation: OpenDoor 1s ease forwards;
+}
+.FallDown{
+    animation: FallDown 1s ease forwards;
+}
+.DelayedRotate3D{
+    animation: DelayedRotate3D 1s ease forwards;
+}
+
+/* Keyframes */
+@keyframes SlideInOnTop{
+    from{
+        z-index: 3;
+        margin-left: -300px;
+    }
+    to{
+        z-index: 3;
+        margin-left: 0px;
+    }
+}
+
+@keyframes Reveal{
+    from{
+        left: 0;
+    }
+    to{
+        left: 300px;
+    }
+}
+
+@keyframes PushS{
+    from{
+        margin-left: -300px;
+    }    
+    to{
+        margin-left: 0px;
+    }
+}
+@keyframes PushC{
+    from{
+        left: 0;
+    }    
+    to{
+        left: 300px;
+    }
+}
+
+@keyframes SlideAlongS{
+    from{
+        margin-left: -300px;
+    }    
+    to{
+        margin-left: 0px;
+    }
+}
+@keyframes SlideAlongC{
+    from{
+        left: 0;
+    }    
+    to{
+        left: 300px;
+    }
+}
+
+@keyframes ReverseSlideOutS{
+    from{
+        margin-left: 300px;
+    }
+    to{
+        margin-left: 0px;
+    }
+}
+@keyframes ReverseSlideOutC{
+    from{
+        left: 0;
+    }    
+    to{
+        left: 300px;
+    }
+}
+
+@keyframes {
+    
+}
+@keyframes {
+    
+}
+@keyframes {
+    
+}
+@keyframes {
+    
+}
+@keyframes {
+    
+}
+@keyframes {
+    
+}
+@keyframes {
+    
+}
+@keyframes {
+    
+}
+@keyframes {
+    
+}

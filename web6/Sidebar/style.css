@@ -1,23 +1,22 @@
 html, body{
     margin:0;
     padding:0;
-    background-color: #f3efe0;
     width: 100%;
     height: 100%;
     font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
 }
 
 /* Sidebar */
 #sidebar{
     position: absolute;
-    width: 0px;
+    width: 300px;
+    margin-left: 0px;
     height: 100%;
     background-color: #3498db;
     color: rgba(0,0,0,50%);
     overflow: hidden;
-}
-#sidebar::after{
-    width: 300px;
+    z-index: -4;
 }
 #logo{
     font-family: 'Lato';
@@ -63,6 +62,9 @@ nav a, nav a:visited{
     font-weight: 300;
 }
 #container{
+    background-color: #f3efe0;
+    z-index: 2;
+    position: relative;
     display: flex;
     flex-grow: 1;
     flex-wrap: wrap;
@@ -70,6 +72,13 @@ nav a, nav a:visited{
     justify-content: center;
     flex-direction: row;
     align-content: baseline;
+}
+#shadow{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.3);
+    visibility: hidden;
 }
 .break{
     height: 0;
@@ -83,11 +92,11 @@ nav a, nav a:visited{
 #h1{
     margin-top: 50px;
     color: #3498db;
-    font-size: 36px;
+    font-size: 44px;
 }
 #h2{
     color: rgba(0,0,0,30%);
-    font-size: 28px;
+    font-size: 26px;
 }
 #allContent{
     margin-top: 100px;
@@ -107,7 +116,7 @@ nav a, nav a:visited{
 }
 #right{
     color: #3498db;
-    font-size: 28px;
+    font-size: 32px;
     font-family: 'Lato';
     font-weight: 300;
     justify-content:flex-start;
