@@ -7,12 +7,17 @@ html, body{
     font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Sidebar */
 #sidebar{
     position: absolute;
-    width: 300px;
+    width: 0px;
     height: 100%;
     background-color: #3498db;
     color: rgba(0,0,0,50%);
+    overflow: hidden;
+}
+#sidebar::after{
+    width: 300px;
 }
 #logo{
     font-family: 'Lato';
@@ -20,10 +25,11 @@ html, body{
     font-weight: 300;
 }
 #logo, .sideOption{
+    display: flex;
+    align-items: center;
     position: relative;
     text-align: left;
     width: auto;
-    text-transform: capitalize;
 }
 .sideOption{
     text-transform: uppercase;
@@ -34,7 +40,7 @@ html, body{
     border-top: 1px solid rgba(0,0,0,20%);
 }
 #logo img, .sideOption img{
-    margin-left: 30px;
+    margin-left: 20px;
     margin-right: 20px;
 }
 .sideOption img{
@@ -42,4 +48,85 @@ html, body{
 }
 #sidebar div:last-child{
     border-bottom: 1px solid rgba(0,0,0,20%);
+}
+
+/* Main container */
+nav{
+    width: 100%;
+    height: fit-content;
+    padding: 5px 15px 5px 0px;
+    text-align: right;
+}
+nav a, nav a:visited{
+    text-decoration: none;
+    color: #3498db;
+    font-weight: 300;
+}
+#container{
+    display: flex;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    height: 100%;
+    justify-content: center;
+    flex-direction: row;
+    align-content: baseline;
+}
+.break{
+    height: 0;
+    flex-basis: 100%;
+}
+#h1, #h2{
+    height: fit-content;
+    font-family: 'Lato';
+    font-weight: 300;
+}
+#h1{
+    margin-top: 50px;
+    color: #3498db;
+    font-size: 36px;
+}
+#h2{
+    color: rgba(0,0,0,30%);
+    font-size: 28px;
+}
+#allContent{
+    margin-top: 100px;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+}
+#left{
+    text-align: right;
+}
+#center{
+    height: 100%;
+    width: 1px;
+    background-color: rgba(0,0,0,20%);
+    margin:0px 20px 0px 20px;
+}
+#right{
+    color: #3498db;
+    font-size: 28px;
+    font-family: 'Lato';
+    font-weight: 300;
+    justify-content:flex-start;
+}
+#left, #right{
+    width: 30%;
+}
+.button{
+    text-transform: uppercase;
+    display: inline-block;
+    margin: 2px;
+    width: fit-content;
+    height: fit-content;
+    background-color: #3498db;
+    padding: 10px 25px 10px 25px;
+    border-radius: 2px; 
+    color: #fafafa;
+}
+.button:hover{
+    cursor: pointer;
+    background-color: #237db9;
 }
