@@ -2,44 +2,140 @@
     font-family: 'Roboto';
 }
 html, body{
+    user-select: none;
     width: 100%;
     margin: 0;
     padding: 0;
+    background-color: #f3f4f5;
 }
 
 #headerContainer{
-    width: 1140px;
+    width: 100%;
+    background-color: #a4aeb0;
 }
 header{
-    padding: 60px 0 45px 0;
-    width: 100%;
+    width: 1140px;
+    margin: 0 auto;
     height: 150px;
     display: flex;
     justify-self: center;
     justify-content: space-between;
+    align-items: center;
+    border-bottom:1px solid #f3f4f5;
 }
 header img{
     width: auto;
     height: 50px;
+    transition: 0.3s;
+}
+#Logo:hover{
+    opacity: 0.4;
+    cursor: pointer;
+}
+#middleHeader{
+    background-image: url(http://make-lemonade.co/themes/selfy/img/masthead@2x.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    height: 1050px;
+    overflow: hidden;
+} 
+#wrapper{
+    margin: 0 auto;
+    width: 1140px;
+} 
+#middleText{
+    margin-top: 20%;
+    font-size: 36px;
+    color: #f3f4f5;
+    width: 60%;
+}
+#middleText h1{
+    font-size: 120px;
+    font-family: "Roboto";
+    margin-bottom: 0;
+}
+#middleText blockquote{
+    font-size: 36px;
+    color: #e2e2e2;
 }
 nav{
-    display: flex;
+    display: inherit;
     width: fit-content;
 }
 .navButton{
     margin: 0px 0.5em;
-    width: 100px;
-    height: 40px;
+    padding: 10px 20px 10px 20px;
+    width: fit-content;
     background-color: transparent;
     border-radius: 5px;
     color: #000;
     transition: 0.3s;
     user-select: none;
+    font-weight: bold;
 }
 .navButton:hover{
-    background-color: #ccc;
+    background-color: #656a6f;
     cursor: pointer;
+    color: #f3f4f5;
 }
 .navButtonActive{
-    background-color: rgb(233, 196, 95);
+    background-color: #FFC000;
+    color: #fff;
+}
+main{
+    display: flex;
+    justify-content: space-between;
+    width: 1140px;
+    margin: 50px auto;
+}
+main .col{
+    width: 30%;
+}
+.col h2{
+    font-size: 36px;
+    font-weight: bold;
+}
+.col h2::after{
+    content: " ■";
+    font-size: 16px;
+    color: #FFC000;
+}
+footer{
+    height: 150px;
+}
+footer .footer{
+    width: fit-content;
+}
+.footer.right .social img{
+    width: 30px;
+    height: 30px;
+    transition: 0.3s;
+}
+#footerContainer{
+    border-top: 1px solid #9fa6aa;
+    padding-top: 50px;
+    margin: 0 auto;
+    width: 1140px;
+    display: flex;
+    justify-content: space-between;
+}
+a{
+    font-weight: bold;
+    text-decoration: none;
+    color: #3c4a52;
+    transition: 0.3s;
+}
+a:hover{
+    color: #ffc000;
+}
+a img:hover{
+    opacity: 0.5;
+    cursor: pointer;
+}
+.rightArrow::before{
+    content: "\2192 ";
+    color: #ffc000;
+    font-weight: bold;
+    font-size: 16px;
 }
