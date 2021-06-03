@@ -8,10 +8,8 @@ html, body{
     padding: 0;
     background-color: #f3f4f5;
 }
-
 #headerContainer{
     width: 100%;
-    background-color: #a4aeb0;
 }
 header{
     width: 1140px;
@@ -21,9 +19,9 @@ header{
     justify-self: center;
     justify-content: space-between;
     align-items: center;
-    border-bottom:1px solid #f3f4f5;
+    border-bottom:1px solid #a4aeb0;
 }
-header img{
+#Logo{
     width: auto;
     height: 50px;
     transition: 0.3s;
@@ -31,33 +29,6 @@ header img{
 #Logo:hover{
     opacity: 0.4;
     cursor: pointer;
-}
-#middleHeader{
-    background-image: url(http://make-lemonade.co/themes/selfy/img/masthead@2x.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    position: relative;
-    height: 1050px;
-    overflow: hidden;
-} 
-#wrapper{
-    margin: 0 auto;
-    width: 1140px;
-} 
-#middleText{
-    margin-top: 20%;
-    font-size: 36px;
-    color: #f3f4f5;
-    width: 60%;
-}
-#middleText h1{
-    font-size: 120px;
-    font-family: "Roboto";
-    margin-bottom: 0;
-}
-#middleText blockquote{
-    font-size: 36px;
-    color: #e2e2e2;
 }
 nav{
     display: inherit;
@@ -68,6 +39,7 @@ nav{
     padding: 10px 20px 10px 20px;
     width: fit-content;
     background-color: transparent;
+    font-size: 20px;
     border-radius: 5px;
     color: #000;
     transition: 0.3s;
@@ -89,25 +61,13 @@ main{
     width: 1140px;
     margin: 50px auto;
 }
-main .col{
-    width: 30%;
-}
-.col h2{
-    font-size: 36px;
-    font-weight: bold;
-}
-.col h2::after{
-    content: " ■";
-    font-size: 16px;
-    color: #FFC000;
-}
 footer{
     height: 150px;
 }
 footer .footer{
     width: fit-content;
 }
-.footer.right .social img{
+.footer.fright .social img{
     width: 30px;
     height: 30px;
     transition: 0.3s;
@@ -132,6 +92,11 @@ a:hover{
 a img:hover{
     opacity: 0.5;
     cursor: pointer;
+}
+h2::after{
+    content: " ■";
+    font-size: 16px;
+    color: #FFC000;
 }
 .rightArrow::before{
     content: "\2192 ";

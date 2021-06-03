@@ -1,0 +1,43 @@
+header{
+    border-bottom: 1px solid #f3f4f5 !important;
+}
+#headerContainer{
+    background-color: #a4aeb0;
+}
+#middleHeader{
+    background-image: url(http://make-lemonade.co/themes/selfy/img/masthead@2x.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    height: 1050px;
+    overflow: hidden;
+} 
+#wrapper{
+    margin: 0 auto;
+    width: 1140px;
+} 
+#middleText{
+    margin-top: 20%;
+    font-size: 36px;
+    color: #f3f4f5;
+    width: 60%;
+}
+#middleText h1{
+    font-size: 120px;
+    font-family: "Roboto";
+    margin-bottom: 0;
+}
+#middleText blockquote{
+    font-size: 36px;
+    color: #e2e2e2;
+}
+main{
+    flex-direction: row;
+}
+main .col{
+    width: 30%;
+}
+.col h2{
+    font-size: 36px;
+    font-weight: bold;
+}

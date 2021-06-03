@@ -1,0 +1,28 @@
+main img{
+    width: 1128px;
+    border: 6px solid #fff;
+}
+main{
+    flex-direction: column;
+}
+main h2{
+    font-size: 66px;
+    margin-bottom: 0;
+}
+#quote{
+    width: 74%;
+    font-size: 24px;
+    font-style: italic;
+    color: #3c4a52;
+}
+#half{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#half div{
+    width: 48%;
+}
+#half div p{
+    font-size: 16px;
+}

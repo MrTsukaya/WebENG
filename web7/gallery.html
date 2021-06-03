@@ -4,10 +4,108 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
     <link rel="stylesheet" href="style.css">
-    <title>Gallery - Selfy style - 13390</title>
+    <link rel="stylesheet" href="gallery.css">
+    <title>Gallery - Selfy - 13390</title>
 </head>
 <body>
-    
+    <div id="headerContainer">
+        <header>
+            <a href="index.html"><img src="http://make-lemonade.co/themes/selfy/img/logo@2x.png" alt="" id="Logo"></a>
+            <nav>
+                <a href="index.html"><div class="navButton">Home</div></a>
+                <a href="about.html"><div class="navButton">About</div></a>
+                <a href="styles.html"><div class="navButton">Styles</div></a>
+                <a href="gallery.html"><div class="navButton navButtonActive">Gallery</div></a>
+                <a href="blog.html"><div class="navButton">Blog</div></a>
+                <a href="contact.html"><div class="navButton">Contact</div></a>
+            </nav>
+        </header>
+    </div>
+    <main>
+        <div class="galleryContainer">
+            <div class="left">
+                <h2>Gallery style one</h2>
+                <p>Praesent commodo vivamus sagittis lacus vel augue ucibus dolom.</p>
+                <p>Donec id elilit non mi porta gravida at eget metus. Donec ullamcorper nulla non metus auctor fringilla. Donec idi portaida at eget metus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Aenean eu leo quam. Pellentesque ornare semonec id elit non mi porta gravida at eget metus. Donec ullamcorper nulla non metus auctor fringilla.</p>
+                <a href="styles.html" class="rightArrow"> See Full Theme Styles</a>
+            </div>
+            <div class="right">
+                <img class="gallery" src="http://make-lemonade.co/themes/selfy/img/mock.jpg">
+                <img class="gallery" src="http://make-lemonade.co/themes/selfy/img/mock2.jpg">
+                <img class="gallery" src="http://make-lemonade.co/themes/selfy/img/mock3.jpg">
+                <img class="gallery" src="http://make-lemonade.co/themes/selfy/img/mock4.jpg">
+                <img class="gallery" src="http://make-lemonade.co/themes/selfy/img/mock5.jpg">
+                <img class="gallery" src="http://make-lemonade.co/themes/selfy/img/mock6.jpg">
+            </div>
+        </div>
+        <hr>
+        <div class="galleryContainer">
+            <div class="left">
+                <h2>Gallery style two</h2>
+                <p>Praesent commodo vivamus sagittis lacus vel augue ucibus dolom.</p>
+                <p>Donec id elilit non mi porta gravida at eget metus. Donec ullamcorper nulla non metus auctor fringilla. Donec id elit non mi porta gravida at eget metus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Aenean eu leo quam. Pellentesque ornare semonec id elit non mi porta gravida at eget metus. Donec ullamcorper nulla non metus auctor fringilla.</p>
+            </div>
+            <div class="right">
+                <img class="gallery" src="http://make-lemonade.co/themes/selfy/img/mock7.jpg">
+                <img class="gallery" src="http://make-lemonade.co/themes/selfy/img/mock.jpg">
+                <img class="gallery" src="http://make-lemonade.co/themes/selfy/img/mock3.jpg">
+            </div>
+        </div>
+        <hr>
+        <div class="galleryContainer">
+            <div class="left">
+                <h2>Gallery style three</h2>
+                <p>Commodo vivamus sagittis lacus vel augue laore sagittis lacus vel augue laoreet rutrum.</p>
+                <p>Blonec id elilit non mi porta gravida at eget metus. Donec ullamcorper nulla non metus auctor fringilla. Donec id elit non mi porta gravida at eget metus. Vivamus sagittis lacus vel auguus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+            </div>
+            <div class="right">
+                <img class="gallery" src="http://make-lemonade.co/themes/selfy/img/mock2.jpg">
+                <img class="gallery" src="http://make-lemonade.co/themes/selfy/img/mock6.jpg">
+            </div>
+        </div>
+    </main>
+    <div id="modal">
+        <span id="closeX">X</span>
+        <div id="modalContent"></div>
+    </div>
+    <footer>
+        <div id="footerContainer">
+           <div class="footer fleft">
+               <a href="index.html">Selfy</a> &copy; Copyright Selfy 2013
+           </div>
+           <div class="footer fright">
+               <a href="" class="social"><img src="http://make-lemonade.co/themes/selfy/img/icon-facebook@2x.png"></a>
+               <a href="" class="social"><img src="http://make-lemonade.co/themes/selfy/img/icon-twitter@2x.png"></a>
+               <a href="" class="social"><img src="http://make-lemonade.co/themes/selfy/img/icon-linkedin@2x.png"></a>
+           </div>
+         </div>
+       </footer>
+
+       <script>
+           var modal = document.getElementById("modal");
+           var modalContent = document.getElementById("modalContent");
+           var images = document.getElementsByClassName("gallery");
+           var close = document.getElementById("closeX");
+
+            for(let i = 0; i<images.length; i++){
+                images[i].addEventListener("click", () => {
+                show(images[i].src);
+                });
+            }
+
+            closeX.addEventListener("click", ()=>{
+                modal.style.visibility = 'hidden';
+            })
+            modalContent.addEventListener("click", ()=> {
+                console.log("działa");
+            })
+
+            function show(link){
+                modal.style.visibility = 'visible';
+                modalContent.style.backgroundImage = "url("+link+")";
+            }
+       </script>
 </body>
 </html>
