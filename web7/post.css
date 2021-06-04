@@ -1,0 +1,73 @@
+#contactLeft{
+    width: 65%;
+}
+#contactLeft h2{
+    font-size: 36px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+#contactLeft p{
+    line-height: 1.5em;
+}
+#contactLeft :nth-child(2){
+    color: #ffc000;
+    font-weight: bold;
+    margin-top: 0;
+}
+#contactLeft img{
+    border: 6px solid #fff;
+    margin-top: 1em;
+    width: 97%;
+}
+#contactLeft :nth-child(4){
+    font-size: 24px;
+    font-family: 'Aleoitalic';
+    font-style: italic;
+}
+#contactLeft figure{
+    margin-right: 0 !important;
+    width: 47%;
+    float: right;
+}
+figure p:first-child{
+    line-height: normal !important;
+    font-weight: normal;
+    font-size: 24px;
+    color: #000;
+    margin-bottom: 0;
+    font-style: italic;
+}
+figure p:last-child{
+    line-height: normal !important;
+    font-size: 14px;
+}
+#contactRight{
+    display: flex;
+    flex-direction: column;
+    width: 24%;
+}
+#contactRight h2{
+    font-size: 36px;
+    margin-bottom: 0;
+}
+#contactRight a{
+    font-weight: normal;
+    margin-top: 1em;
+}
+#contactRight p{
+    margin-top: 0;
+    color: #656a6f;
+    font-style: italic;
+    line-height: 1.5em;
+}
+#vl{
+    width: 1px;
+    background-color: #9fa6aa;
+    height: 400px;
+    opacity: 0.5;
+}
+hr{
+    width: 100%;
+    margin-left: 0 !important;
+    opacity: 0.5;
+}
