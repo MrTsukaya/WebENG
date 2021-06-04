@@ -3,7 +3,7 @@ var formEmail = document.getElementById("formEmail");
 var formMessage = document.getElementById("formMessage");
 var labels = document.getElementsByClassName("formLabel");
 
-var matchName = /[A-z] [A-z]/;
+var matchName = /^[a-zA-Z ]{2,50}$/;
 var matchEmail = /^[^\s@]+@[^\s@]+$/;
 
 var allGood = true;
