@@ -1,0 +1,40 @@
+main{
+    flex-direction: column;
+}
+.content{
+    display: flex;
+    flex-direction: row;
+    width: 1140px;
+}
+.content .blogLeft{
+    width: 30%;
+    margin-right: 5%;
+}
+.content .blogRight{
+    width: 65%;
+}
+.content .blogRight img{
+    width: 98%;
+    max-width: 98%;
+    border: 6px solid #fff;
+    margin: 1em auto;
+}
+main h2{
+    font-size: 36px;
+    margin-bottom: 0;
+}
+.content .blogLeft :nth-child(2){
+    color: #FFC000;
+    margin-top: 0;
+    font-size: 14px;
+    font-weight: bold;
+}
+.content .blogLeft :nth-child(3){
+    font-size: 24px;
+    font-weight: 300;
+    font-family: 'Aleoitalic';
+    font-style:italic;
+}
+.content .blogLeft :nth-child(4){
+    line-height: 1.5em;
+}

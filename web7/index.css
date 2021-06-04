@@ -41,3 +41,6 @@ main .col{
     font-size: 36px;
     font-weight: bold;
 }
+blockquote{
+    font-family: 'Aleoitalic';
+}

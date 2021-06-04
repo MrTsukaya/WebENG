@@ -4,10 +4,6 @@ main{
 .galleryContainer{
     width: 1140px;
 }
-main hr{
-    height: 1px;
-    margin: 3em;
-}
 .left{
     width: 30%;
     margin-right: 5%;
@@ -19,6 +15,7 @@ main hr{
 .left :nth-child(2){
     font-size: 24px;
     font-style: italic;
+    font-family: 'Aleoitalic';
 }
 .right{
     width: 65%;

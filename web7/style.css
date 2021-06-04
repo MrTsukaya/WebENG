@@ -89,6 +89,9 @@ a{
 a:hover{
     color: #ffc000;
 }
+a img{
+    transition: 0.3s;
+}
 a img:hover{
     opacity: 0.5;
     cursor: pointer;
@@ -103,4 +106,8 @@ h2::after{
     color: #ffc000;
     font-weight: bold;
     font-size: 16px;
+}
+main hr{
+    height: 1px;
+    margin: 3em;
 }
