@@ -32,12 +32,12 @@
                 <a href="styles.html" class="rightArrow"> See Full Theme Styles</a>
             </div>
             <div class="right">
-                <img class="gallery" src="http://make-lemonade.co/themes/selfy/img/mock.jpg">
-                <img class="gallery" src="http://make-lemonade.co/themes/selfy/img/mock2.jpg">
-                <img class="gallery" src="http://make-lemonade.co/themes/selfy/img/mock3.jpg">
-                <img class="gallery" src="http://make-lemonade.co/themes/selfy/img/mock4.jpg">
-                <img class="gallery" src="http://make-lemonade.co/themes/selfy/img/mock5.jpg">
-                <img class="gallery" src="http://make-lemonade.co/themes/selfy/img/mock6.jpg">
+                <img class="gallery1" src="http://make-lemonade.co/themes/selfy/img/mock.jpg">
+                <img class="gallery1" src="http://make-lemonade.co/themes/selfy/img/mock2.jpg">
+                <img class="gallery1" src="http://make-lemonade.co/themes/selfy/img/mock3.jpg">
+                <img class="gallery1" src="http://make-lemonade.co/themes/selfy/img/mock4.jpg">
+                <img class="gallery1" src="http://make-lemonade.co/themes/selfy/img/mock5.jpg">
+                <img class="gallery1" src="http://make-lemonade.co/themes/selfy/img/mock6.jpg">
             </div>
         </div>
         <hr>
@@ -48,9 +48,9 @@
                 <p>Donec id elilit non mi porta gravida at eget metus. Donec ullamcorper nulla non metus auctor fringilla. Donec id elit non mi porta gravida at eget metus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Aenean eu leo quam. Pellentesque ornare semonec id elit non mi porta gravida at eget metus. Donec ullamcorper nulla non metus auctor fringilla.</p>
             </div>
             <div class="right">
-                <img class="gallery" src="http://make-lemonade.co/themes/selfy/img/mock7.jpg">
-                <img class="gallery" src="http://make-lemonade.co/themes/selfy/img/mock.jpg">
-                <img class="gallery" src="http://make-lemonade.co/themes/selfy/img/mock3.jpg">
+                <img class="gallery2" src="http://make-lemonade.co/themes/selfy/img/mock7.jpg">
+                <img class="gallery2" src="http://make-lemonade.co/themes/selfy/img/mock.jpg">
+                <img class="gallery2" src="http://make-lemonade.co/themes/selfy/img/mock3.jpg">
             </div>
         </div>
         <hr>
@@ -61,13 +61,15 @@
                 <p>Blonec id elilit non mi porta gravida at eget metus. Donec ullamcorper nulla non metus auctor fringilla. Donec id elit non mi porta gravida at eget metus. Vivamus sagittis lacus vel auguus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
             </div>
             <div class="right">
-                <img class="gallery" src="http://make-lemonade.co/themes/selfy/img/mock2.jpg">
-                <img class="gallery" src="http://make-lemonade.co/themes/selfy/img/mock6.jpg">
+                <img class="gallery3" src="http://make-lemonade.co/themes/selfy/img/mock2.jpg">
+                <img class="gallery3" src="http://make-lemonade.co/themes/selfy/img/mock6.jpg">
             </div>
         </div>
     </main>
     <div id="modal">
         <span id="closeX">X</span>
+        <span id="previous">&lt;&lt;</span>
+        <span id="next">&gt;&gt;</span>
         <div id="modalContent"></div>
     </div>
     <footer>
@@ -86,14 +88,47 @@
        <script>
            var modal = document.getElementById("modal");
            var modalContent = document.getElementById("modalContent");
-           var images = document.getElementsByClassName("gallery");
-           var close = document.getElementById("closeX");
+           
+           var images1 = document.getElementsByClassName("gallery1");
+           var images2 = document.getElementsByClassName("gallery2");
+           var images3 = document.getElementsByClassName("gallery3");
 
-            for(let i = 0; i<images.length; i++){
-                images[i].addEventListener("click", () => {
-                show(images[i].src);
+           var close = document.getElementById("closeX");
+           var previous = document.getElementById("previous");
+           var next = document.getElementById("next");
+           var now = {
+            nowGallery: null,
+            nowPicture: 0
+           };
+
+            for(let i = 0; i<images1.length; i++){
+                images1[i].addEventListener("click", () => {
+                now.nowGallery = images1;
+                now.nowPicture = i;
+                show(images1[i].src);
                 });
             }
+            for(let i = 0; i<images2.length; i++){
+                images2[i].addEventListener("click", () => {
+                now.nowGallery = images2;
+                now.nowPicture = i;
+                show(images2[i].src);
+                });
+            }
+            for(let i = 0; i<images3.length; i++){
+                images3[i].addEventListener("click", () => {
+                now.nowGallery = images3;
+                now.nowPicture = i;
+                show(images3[i].src);
+                });
+            }
+
+            previous.addEventListener("click", ()=>{
+                slide(now.nowGallery,now.nowPicture,"left");
+            });
+            next.addEventListener("click", ()=>{
+                slide(now.nowGallery,now.nowPicture,"right");
+            });
 
             closeX.addEventListener("click", ()=>{
                 modal.style.visibility = 'hidden';
@@ -105,6 +140,24 @@
             function show(link){
                 modal.style.visibility = 'visible';
                 modalContent.style.backgroundImage = "url("+link+")";
+            }
+            function slide(gallery,picture,direction){
+                if(direction == "right"){
+                    if(gallery[picture+1] == null){
+                        picture = -1;
+                        now.nowPicture = -1;    
+                    }
+                    now.nowPicture += 1;
+                    show(gallery[picture+1].src);
+                }
+                if(direction == "left"){
+                    if(picture == 0){
+                        picture = gallery.length;
+                        now.nowPicture = gallery.length;
+                    }
+                    now.nowPicture -= 1;
+                    show(gallery[picture-1].src);
+                }
             }
        </script>
 </body>
