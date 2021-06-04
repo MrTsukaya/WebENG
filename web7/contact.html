@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Aleo">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="contact.css">
     <title>Contact - Selfy - 13390</title>
 </head>
 <body>
@@ -23,7 +24,32 @@
             </nav>
         </header>
     </div>
-
+    <main>
+        <div id="contactLeft">
+            <h2>Contact Me</h2>
+            <p>Praesent commodo cursus magna, venenatis vestibulum. Donec id elit non mi porta gravida at eget vel scelerisl consectetur etsie.</p>
+            <p>Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla.</p>
+            <form id="Form" action="#" onsubmit="check();return false">
+                <object class="formLabel"><label for="name">Please enter your name</label></object>
+                <input type="text" name="name" id="formName" placeholder="What's your name" autofocus>
+                <object class="formLabel"><label for="email">Please enter your email</label></object>
+                <input type="text" name="email" id="formEmail" placeholder="Email goes here">
+                <object class="formLabel"><label for="message">Please enter your message</label></object>
+                <input type="text" name="message" id="formMessage" placeholder="What's this about?">
+                <input type="submit" value="Send Message" id="formSubmit">
+            </form>
+        </div>
+        <div id="vl"></div>
+        <div id="contactRight">
+            <h2>Networks</h2>
+            <a href="post.html" class="rightArrow"> Follow Me on Facebook</a>
+            <a href="post.html" class="rightArrow"> Hanging out on Dribbble</a>
+            <a href="post.html" class="rightArrow"> Tweeting up a storm</a>
+            <hr>
+            <p>Vestibulum id ligula porta felis euismod semper. Maecenas sed diam eget risus varius blandit sit ametr nulla non metus auctor fringilla.</p>
+            <a href="styles.html" class="rightArrow"> See the Full Theme Styles</a>
+        </div>
+    </main>
     <footer>
         <div id="footerContainer">
            <div class="footer fleft">
@@ -36,5 +62,6 @@
            </div>
          </div>
        </footer>
+       <script src="contact.js"></script>
 </body>
 </html>

@@ -104,7 +104,6 @@ h2::after{
 .rightArrow::before{
     content: "\2192 ";
     color: #ffc000;
-    font-weight: bold;
     font-size: 16px;
 }
 main hr{
