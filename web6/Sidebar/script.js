@@ -26,11 +26,21 @@ function Reset(){
         main.classList.remove(animEffect);
         //console.log("Usunięto ", animEffect);
     }
+    BackwardsAnimation(currentEffect);
     shadow.style.visibility = "hidden";
 }
+function BackwardsAnimation(effectRev){
+    console.log(effectRev);
+    sidebar.classList.add(effectRev+"Rev");
+    main.classList.add(effectRev+"Rev");
 
+    setTimeout(()=>{
+        console.log("Wymazałem ",currentEffect);
+        sidebar.classList.remove(currentEffect+"Rev");
+        main.classList.remove(currentEffect+"Rev");
+    },500);
+}
 function sidebarAnimation(effect){
-    Reset();
     sidebar.classList.add(effect);
     main.classList.add(effect);
     shadow.style.visibility = "visible";

@@ -1,21 +1,39 @@
-/* Effects */
+/* Effects and their alternate versions */
 #sidebar.SlideInOnTop{
     animation: SlideInOnTop 0.3s ease forwards;
+}
+#sidebar.SlideInOnTopRev{
+    animation: SlideInOnTopRev 0.3s ease backwards alternate;
 }
 #container.Reveal{
     animation: Reveal 0.5s ease forwards;
 }
+#container.RevealRev{
+    animation: RevealRev 0.5s ease backwards alternate;
+}
 #sidebar.Push{
     animation: PushS 0.5s ease forwards;
+}
+#sidebar.PushRev{
+    animation: PushSRev 0.5s ease backwards alternate;
 }
 #container.Push{
     animation: PushC 0.5s ease forwards;
 } 
+#container.PushRev{
+    animation: PushCRev 0.5s ease backwards alternate;
+} 
 #sidebar.SlideAlong{
     animation: SlideAlongS 0.3s ease forwards;
 }
+#sidebar.SlideAlongRev{
+    animation: SlideAlongSRev 0.3s ease backwards alternate;
+}
 #container.SlideAlong{
     animation: SlideAlongC 0.5s ease forwards;
+}
+#container.SlideAlongRev{
+    animation: SlideAlongCRev 0.3s ease backwards alternate;
 }
 /*  */
 #sidebar.ReverseSlideOut{
@@ -63,7 +81,17 @@
         margin-left: 0px;
     }
 }
-
+@keyframes SlideInOnTopRev{
+    from{
+        z-index: 3;
+        margin-left: 0px;
+    }
+    to{
+        z-index: 3;
+        margin-left: -300px;
+    }
+}
+/*  */
 @keyframes Reveal{
     from{
         left: 0;
@@ -72,7 +100,15 @@
         left: 300px;
     }
 }
-
+@keyframes RevealRev{
+    from{
+        left: 300px;
+    }
+    to{
+        left: 0px;
+    }
+}
+/*  */
 @keyframes PushS{
     from{
         margin-left: -300px;
@@ -89,7 +125,23 @@
         left: 300px;
     }
 }
-
+@keyframes PushSRev{
+    from{
+        margin-left: 0px;
+    }    
+    to{
+        margin-left: -300px;
+    }
+}
+@keyframes PushCRev{
+    from{
+        left: 300px;
+    }    
+    to{
+        left: 0px;
+    }
+}
+/*  */
 @keyframes SlideAlongS{
     from{
         margin-left: -300px;
@@ -100,13 +152,29 @@
 }
 @keyframes SlideAlongC{
     from{
-        left: 0;
+        left: 0px;
     }    
     to{
         left: 300px;
     }
 }
-
+@keyframes SlideAlongSRev{
+    from{
+        margin-left: 0px;
+    }    
+    to{
+        margin-left: -300px;
+    }
+}
+@keyframes SlideAlongCRev{
+    from{
+        left: 300px;
+    }    
+    to{
+        left: 0px;
+    }
+}
+/*  */
 @keyframes ReverseSlideOutS{
     from{
         margin-left: 300px;
