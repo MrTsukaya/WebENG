@@ -83,25 +83,78 @@
 #container.RotateOut3DRev{
     animation: RotateOut3DCRev 0.5s ease backwards alternate;
 }
+#sidebar.ScaleDownPusher{
+    animation: ScaleDownPusherS 0.5s ease forwards;
+}
+#container.ScaleDownPusher{
+    animation: ScaleDownPusherC 0.5s ease forwards;
+}
+#sidebar.ScaleDownPusherRev{
+    animation: ScaleDownPusherSRev 0.5s ease backwards alternate;
+}
+#container.ScaleDownPusherRev{
+    animation: ScaleDownPusherCRev 0.5s ease backwards alternate;
+}
+#sidebar.ScaleUp{
+    animation: ScaleUpS 0.5s ease forwards;
+}
+#container.ScaleUp{
+    animation: ScaleUpC 0.5s ease forwards;
+}
+#sidebar.ScaleUpRev{
+    animation: ScaleUpSRev 0.5s ease backwards alternate;
+}
+#container.ScaleUpRev{
+    animation: ScaleUpCRev 0.5s ease backwards alternate;
+}
+#sidebar.ScaleRotatePusher{
+    animation: ScaleRotatePusherS 0.5s ease forwards;
+}
+#container.ScaleRotatePusher{
+    animation: ScaleRotatePusherC 0.5s ease forwards;
+}
+#sidebar.ScaleRotatePusherRev{
+    animation: ScaleRotatePusherSRev 0.5s ease backwards alternate;
+}
+#container.ScaleRotatePusherRev{
+    animation: ScaleRotatePusherCRev 0.5s ease backwards alternate;
+}
+#sidebar.OpenDoor{
+    animation: OpenDoorS 0.5s ease forwards;
+}
+#container.OpenDoor{
+    animation: OpenDoorC 0.5s ease forwards;
+}
+#sidebar.OpenDoorRev{
+    animation: OpenDoorSRev 0.5s ease backwards alternate;
+}
+#container.OpenDoorRev{
+    animation: OpenDoorCRev 0.5s ease backwards alternate;
+}
 
-
-.ScaleDownPusher{
-    animation: ScaleDownPusher 1s ease forwards;
+#sidebar.FallDown{
+    animation: FallDownS 0.75s ease forwards;
 }
-.ScaleUp{
-    animation: ScaleUp 1s ease forwards;
+#container.FallDown{
+    animation: FallDownC 0.5s ease forwards;
 }
-.ScaleRotatePusher{
-    animation: ScaleRotatePusher 1s ease forwards;
+#sidebar.FallDownRev{
+    animation: FallDownSRev 0.75s ease backwards alternate;
 }
-.OpenDoor{
-    animation: OpenDoor 1s ease forwards;
+#container.FallDownRev{
+    animation: FallDownCRev 0.5s ease backwards alternate;
 }
-.FallDown{
-    animation: FallDown 1s ease forwards;
+#sidebar.DelayedRotate3D{
+    animation: DelayedRotate3DS 1s ease forwards;
 }
-.DelayedRotate3D{
-    animation: DelayedRotate3D 1s ease forwards;
+#container.DelayedRotate3D{
+    animation: DelayedRotate3DC 0.5s ease forwards;
+}
+#sidebar.DelayedRotate3DRev{
+    animation: DelayedRotate3DSRev 1s ease backwards alternate;
+}
+#container.DelayedRotate3DRev{
+    animation: DelayedRotate3DCRev 0.5s ease backwards alternate;
 }
 
 /* Keyframes */
@@ -362,61 +415,224 @@
     }
 }
 
-
-
-@keyframes {
+@keyframes ScaleDownPusherS{
     from{
-
+        left: -300px;
+        z-index: 4;
     }
     to{
-        
+        left: 0px;
+        z-index: 4;
     }
 }
-@keyframes {
+@keyframes ScaleDownPusherC{
     from{
-
+        transform: scale(1);
     }
     to{
-        
+        transform: scale(0.8);
     }
 }
-@keyframes {
+@keyframes ScaleDownPusherSRev{
     from{
-
+        left: 0px;
+        z-index: 4;
     }
     to{
-        
+        left: -300px;
+        z-index: 4;
     }
 }
-@keyframes {
+@keyframes ScaleDownPusherCRev{
     from{
-
+        transform: scale(0.8);
     }
     to{
-        
+        transform: scale(1);
     }
 }
-@keyframes {
-    from{
 
+@keyframes ScaleUpS{
+    from{
+        left: 0;
+        transform: scale(0.8);
     }
     to{
-        
+        left: 0;
+        transform: scale(1);
     }
 }
-@keyframes {
+@keyframes ScaleUpC{
     from{
-
+        left: 0;
     }
     to{
-        
+        left: 300px;
     }
 }
-@keyframes {
+@keyframes ScaleUpSRev{
     from{
-
+        left: 0;
+        transform: scale(1);
     }
     to{
-        
+        left: 0;
+        transform: scale(0.8);
+    }
+}
+@keyframes ScaleUpCRev{
+    from{
+        left: 300px;
+    }
+    to{
+        left: 0px;
+    }
+}
+@keyframes ScaleRotatePusherS{
+    from{
+        z-index: 4;
+        left: -300px;
+    }
+    to{
+        z-index: 4;
+        left: 0;
+    }
+}
+@keyframes ScaleRotatePusherC{
+    from{
+        transform: scale(1) rotateY(0deg);
+    }
+    to{
+        transform: scale(0.6) rotateY(-15deg);
+    }
+}
+@keyframes ScaleRotatePusherSRev{
+    from{
+        z-index: 4;
+        left: 0px;
+    }
+    to{
+        z-index: 4;
+        left: -300px;
+    }
+}
+@keyframes ScaleRotatePusherCRev{
+    from{
+        transform: scale(0.6) rotateY(-15deg);
+    }
+    to{
+        transform: scale(1) rotateY(0deg);
+    }
+}
+@keyframes OpenDoorS{
+    from{
+        z-index: 4;
+        left: -300px;
+    }
+    to{
+        z-index: 4;
+        left: 0;
+    }
+}
+@keyframes OpenDoorC{
+    from{
+        transform: scale(1) rotateY(0deg);
+        transform-origin: center right;
+    }
+    to{
+        transform-origin: center right;
+        transform: scale(0.8) rotateY(-15deg);
+    }
+}
+@keyframes OpenDoorSRev{
+    from{
+        z-index: 4;
+        left: 0px;
+    }
+    to{
+        z-index: 4;
+        left: -300px;
+    }
+}
+@keyframes OpenDoorCRev{
+    from{
+        transform-origin: center right;
+        transform: scale(0.8) rotateY(-15deg);
+    }
+    to{
+        transform-origin: center right;
+        transform: scale(1) rotateY(0deg);
+    }
+}
+@keyframes FallDownS{
+    from{
+        top: -120%;
+    }
+    to{
+        top: 0;
+    }
+}
+@keyframes FallDownC{
+    from{
+        left: 0;
+    }
+    to{
+        left: 300px;
+    }
+}
+@keyframes FallDownSRev{
+    from{
+        top: 0;
+    }
+    to{
+        top: -120%;
+    }
+}
+@keyframes FallDownCRev{
+    from{
+        left: 300px;
+    }
+    to{
+        left: 0px;
+    }
+}
+@keyframes DelayedRotate3DS{
+    from{
+        left: 0;
+        transform: scale(0.6) rotateY(180deg);
+        transform-origin: center left;
+    }
+    to{
+        left: 0;
+        transform: scale(1) rotateY(0deg);
+        transform-origin: center left;
+    }
+}
+@keyframes DelayedRotate3DC{
+    from{
+        left: 0;
+    }
+    to{
+        left: 300px;
+    }
+}
+@keyframes DelayedRotate3DSRev{
+    from{
+        left: 0;
+        transform: scale(1) rotateY(0deg);
+        transform-origin: center left;
+    }
+    to{
+        left: 0;
+        transform: scale(0.6) rotateY(180deg);
+        transform-origin: center left;
+    }
+}
+@keyframes DelayedRotate3DCRev{
+    from{
+        left: 300px;
+    }
+    to{
+        left: 0px;
     }
 }

@@ -6,6 +6,7 @@ html, body{
     font-family: Arial, Helvetica, sans-serif;
     overflow: hidden;
     perspective: 1500px;
+    background-color: rgb(83, 78, 78);
     transform-style: preserve-3d;
 }
 
@@ -79,8 +80,10 @@ nav a, nav a:visited{
     position: fixed;
     height: 100%;
     width: 100%;
-    background-color: rgba(0,0,0,0.3);
     visibility: hidden;
+    z-index: 50;
+    transition: 0.3s;
+    animation: shadow 5s ease infinite;
 }
 .break{
     height: 0;
@@ -140,4 +143,16 @@ nav a, nav a:visited{
 .button:hover{
     cursor: pointer;
     background-color: #237db9;
+}
+
+@keyframes shadow{
+    from{
+        background-color: rgba(0,0,0,0.1);
+    }
+    50%{
+        background-color: rgba(0,0,0,0.4);
+    }
+    to{
+        background-color: rgba(0,0,0,0.1);
+    }
 }
