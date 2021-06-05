@@ -35,22 +35,56 @@
 #container.SlideAlongRev{
     animation: SlideAlongCRev 0.3s ease backwards alternate;
 }
-/*  */
 #sidebar.ReverseSlideOut{
     animation: ReverseSlideOutS 0.5s ease forwards;
 }
 #container.ReverseSlideOut{
     animation: ReverseSlideOutC 0.5s ease forwards;
 }
-.RotatePusher{
-    animation: RotatePusher 1s ease forwards;
+#sidebar.ReverseSlideOutRev{
+    animation: ReverseSlideOutSRev 0.5s ease backwards alternate;
 }
-.RotateIn3D{
-    animation: RotateIn3D 1s ease forwards;
+#container.ReverseSlideOutRev{
+    animation: ReverseSlideOutCRev 0.5s ease backwards alternate;
 }
-.RotateOut3D{
-    animation: RotateOut3D 1s ease forwards;
+#sidebar.RotatePusher{
+    animation: RotatePusherS 0.5s ease forwards;
 }
+#container.RotatePusher{
+    animation: RotatePusherC 0.5s ease forwards;
+}
+#sidebar.RotatePusherRev{
+    animation: RotatePusherSRev 0.5s ease backwards alternate;
+}
+#container.RotatePusherRev{
+    animation: RotatePusherCRev 0.5s ease backwards alternate;
+}
+#sidebar.RotateIn3D{
+    animation: RotateIn3DS 1s ease forwards;
+}
+#container.RotateIn3D{
+    animation: RotateIn3DC 0.5s ease forwards;
+}
+#sidebar.RotateIn3DRev{
+    animation: RotateIn3DSRev 1s ease backwards alternate;
+}
+#container.RotateIn3DRev{
+    animation: RotateIn3DCRev 0.5s ease backwards alternate;
+}
+#sidebar.RotateOut3D{
+    animation: RotateOut3DS 0.75s ease forwards;
+}
+#container.RotateOut3D{
+    animation: RotateOut3DC 0.5s ease forwards;
+}
+#sidebar.RotateOut3DRev{
+    animation: RotateOut3DSRev 1s ease backwards alternate;
+}
+#container.RotateOut3DRev{
+    animation: RotateOut3DCRev 0.5s ease backwards alternate;
+}
+
+
 .ScaleDownPusher{
     animation: ScaleDownPusher 1s ease forwards;
 }
@@ -174,7 +208,6 @@
         left: 0px;
     }
 }
-/*  */
 @keyframes ReverseSlideOutS{
     from{
         margin-left: 300px;
@@ -191,31 +224,199 @@
         left: 300px;
     }
 }
+@keyframes ReverseSlideOutSRev{
+    from{
+        margin-left: 0px;
+    }
+    to{
+        margin-left: 300px;
+    }
+}
+@keyframes ReverseSlideOutCRev{
+    from{
+        left: 300px;
+    }    
+    to{
+        left: 0px;
+    }
+}
+@keyframes RotatePusherS{
+    from{
+        transform: translate3d(-300px,0,0) rotateY(0deg);
+        transform-origin: 100% 50%;
+    }
+    to{
+        transform: translate3d(0,0,0) rotateY(25deg);
+        transform-origin: 100% 50%;
+    }
+}
+@keyframes RotatePusherC{
+    from{
+        transform: translate3d(0,0,0) rotateY(0deg);
+        transform-origin: 0 0;
+    }    
+    to{
+        transform: translate3d(300px,0,0) rotateY(-25deg);
+        transform-origin: 0 50%;
+    }
+}
+@keyframes RotatePusherSRev{
+    from{
+        transform: translate3d(0,0,0) rotateY(25deg);
+        transform-origin: 100% 50%;
+    }
+    to{
+        transform: translate3d(-300px,0,0) rotateY(0deg);
+        transform-origin: 100% 50%;
+    }
+}
+@keyframes RotatePusherCRev{
+    from{
+        transform: translate3d(300px,0,0) rotateY(-25deg);
+        transform-origin: 0 50%;
+    }    
+    to{
+        transform: translate3d(0px,0,0) rotateY(0deg);
+        transform-origin: 0 0;
+    }
+}
+
+@keyframes RotateIn3DS{
+    from{
+        transform: translate3d(0,0,0) rotateY(-180deg);
+        transform-origin: center right;
+        left: 0px;
+    }
+    to{
+        transform-origin: center right;
+        transform: translate3d(0,0,0) rotateY(0deg);
+        left: 0px;
+    }
+}
+@keyframes RotateIn3DC{
+    from{
+        left: 0px;
+    }
+    to{
+        left: 300px;
+    }
+}
+@keyframes RotateIn3DSRev{
+    from{
+        transform-origin: center right;
+        transform: translate3d(0,0,0) rotateY(0deg);
+        left: 0px;
+    }
+    to{
+        transform: translate3d(0,0,0) rotateY(-180deg);
+        transform-origin: center right;
+        left: 0px;
+    }
+}
+@keyframes RotateIn3DCRev{
+    from{
+        left: 300px;
+    }
+    to{
+        left: 0px;
+    }
+}
+@keyframes RotateOut3DS{
+    from{
+        transform: translate3d(0,0,0) rotateY(90deg);
+        transform-origin: center right;
+        left: 0px;
+    }
+    to{
+        transform-origin: center right;
+        transform: translate3d(0,0,0) rotateY(0deg);
+        left: 0px;
+    }
+}
+@keyframes RotateOut3DC{
+    from{
+        left: 0px;
+    }
+    to{
+        left: 300px;
+    }
+}
+@keyframes RotateOut3DSRev{
+    from{
+        transform-origin: center right;
+        transform: translate3d(0,0,0) rotateY(0deg);
+        left: 0px;
+    }
+    to{
+        transform: translate3d(0,0,0) rotateY(90deg);
+        transform-origin: center right;
+        left: 0px;
+    }
+}
+@keyframes RotateOut3DCRev{
+    from{
+        left: 300px;
+    }
+    to{
+        left: 0px;
+    }
+}
+
+
 
 @keyframes {
-    
+    from{
+
+    }
+    to{
+        
+    }
 }
 @keyframes {
-    
+    from{
+
+    }
+    to{
+        
+    }
 }
 @keyframes {
-    
+    from{
+
+    }
+    to{
+        
+    }
 }
 @keyframes {
-    
+    from{
+
+    }
+    to{
+        
+    }
 }
 @keyframes {
-    
+    from{
+
+    }
+    to{
+        
+    }
 }
 @keyframes {
-    
+    from{
+
+    }
+    to{
+        
+    }
 }
 @keyframes {
-    
-}
-@keyframes {
-    
-}
-@keyframes {
-    
+    from{
+
+    }
+    to{
+        
+    }
 }
