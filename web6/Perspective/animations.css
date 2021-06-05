@@ -1,0 +1,384 @@
+#sidebar :nth-child(1){animation-delay: 0s !important;}
+#sidebar :nth-child(2){animation-delay: 0.1s !important;}
+#sidebar :nth-child(3){animation-delay: 0.2s !important;}
+#sidebar :nth-child(4){animation-delay: 0.3s !important;}
+#sidebar :nth-child(5){animation-delay: 0.4s !important;}
+#sidebar :nth-child(6){animation-delay: 0.5s !important;}
+#sidebar :nth-child(7){animation-delay: 0.6s !important;}
+
+/*  */
+#sidebar.AIRBRN, #sidebar.AIRBRNRev{
+    left: 300px;
+    top: 15%;
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(103%);
+}
+#sidebar.AIRBRN .sideOption {
+    margin-left: -300px;
+    animation: airbrnS 1s ease forwards;
+}
+#container.AIRBRN{
+    animation: airbrnC 0.5s ease forwards;
+}
+#sidebar.AIRBRNRev .sideOption {
+    margin-left: -300px;
+    animation: airbrnSRev 1s ease backwards alternate;
+}
+#container.AIRBRNRev{
+    animation: airbrnCRev 0.5s ease backwards alternate;
+}
+/*  */
+
+/*  */
+#sidebar.MoveLeft, #sidebar.MoveLeftRev{
+    right: 300px;
+    top: 15%;
+    filter: invert(53%) sepia(48%) saturate(5564%) hue-rotate(346deg) brightness(99%) contrast(83%);
+}
+#sidebar.MoveLeft .sideOption{
+    opacity: 0;
+    margin-top: -20px;
+    animation: MoveLeftS 1s ease forwards;
+}
+#container.MoveLeft{
+    animation: MoveLeftC 0.5s ease forwards;
+}
+#sidebar.MoveLeftRev .sideOption{
+    animation: MoveLeftSRev 1s ease backwards alternate;
+}
+#container.MoveLeftRev{
+    animation: MoveLeftCRev 0.5s ease backwards alternate;
+}
+/*  */
+
+/*  */
+#sidebar.RotateLeft, #sidebar.RotateLeftRev{
+    right: 300px;
+    top: 15%;
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(103%);
+}
+#sidebar.RotateLeft .sideOption{
+    margin-top: 20px;
+    opacity: 0;
+    animation: RotateLeftS 0.5s ease forwards;
+}
+#container.RotateLeft{
+    animation: RotateLeftC 0.5s ease forwards;
+}
+#sidebar.RotateLeftRev .sideOption{
+    animation: RotateLeftSRev 0.5s ease backwards alternate;
+}
+#container.RotateLeftRev{
+    animation: RotateLeftCRev 0.5s ease backwards alternate;
+}
+/*  */
+
+/*  */
+#sidebar.MoveDown, #sidebar.MoveDownRev{
+    top: 20%;
+    width: 60%;
+    left: 20%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(103%);
+}
+#sidebar.MoveDown .sideOption{
+    margin-top: -20px;
+    opacity: 0;
+    animation: MoveDownS 0.5s ease forwards;
+}
+#container.MoveDown{
+    animation: MoveDownC 0.5s ease forwards;
+}
+#sidebar.MoveDownRev .sideOption{
+    animation: MoveDownSRev 0.5s ease forwards;
+}
+#container.MoveDownRev{
+    animation: MoveDownCRev 0.5s ease forwards;
+}
+/*  */
+
+/*  */
+#sidebar.RotateTop, #sidebar.RotateTopRev{
+    bottom: 20%;
+    width: 60%;
+    left: 20%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    filter: invert(75%) sepia(71%) saturate(3980%) hue-rotate(329deg) brightness(103%) contrast(86%);
+}
+#sidebar.RotateTop .sideOption{
+    margin-bottom: -20px;
+    opacity: 0;
+    animation: RotateTopS 0.5s ease forwards;
+}
+#container.RotateTop{
+    animation: RotateTopC 0.5s ease forwards;
+}
+#sidebar.RotateTopRev{
+    animation: RotateTopSRev 0.5s ease backwards alternate;
+}
+#container.RotateTopRev{
+    animation: RotateTopCRev 0.5s ease backwards alternate;
+}
+/*  */
+
+/*  */
+#sidebar.LayDown,#sidebar.LayDownRev{
+    top: 20%;
+    width: 60%;
+    left: 20%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(103%);
+}
+#sidebar.LayDown .sideOption{
+    opacity: 0;
+    margin-top: -300px;
+    animation: LayDownS 0.5s ease forwards;
+}
+#container.LayDown{
+    animation: LayDownC 0.5s ease forwards;
+}
+#sidebar.LayDownRev .sideOption{
+    animation: LayDownSRev 0.5s ease backwards alternate;
+}
+#container.LayDownRev{
+    animation: LayDownCRev 0.5s ease backwards alternate;
+}
+/*  */
+
+
+
+
+
+
+@keyframes airbrnS{
+    from{
+        opacity: 0;
+        margin-left: -300px;
+    }
+    to{
+        opacity: 1;
+        margin-left: 0px;
+    }
+}
+@keyframes airbrnC{
+    from{
+        transform: translate3d(0,0,0) rotateY(0deg) scale(1);
+    }
+    to{
+        transform: translate3d(50%,0,0) rotateY(-45deg) scale(0.6);
+    }
+}
+@keyframes airbrnSRev{
+    from{
+        opacity: 1;
+        margin-left: 0px;
+    }
+    to{
+        opacity: 1;
+        margin-left: 0px;
+    }
+}
+@keyframes airbrnCRev{
+    from{
+        transform: translate3d(50%,0,0) rotateY(-45deg) scale(0.6);
+    }
+    to{
+        transform: translate3d(0,0,0) rotateY(0deg) scale(1);
+    }
+}
+
+/*                                                                       */
+@keyframes MoveLeftS {
+    from{
+        opacity: 0;
+        transform: scale(0);
+        margin-top: -20px;
+    }
+    to{
+        opacity: 1;
+        transform: scale(1);
+        margin-top: 0px;
+    }
+}
+@keyframes MoveLeftC {
+    from{
+        transform: translate3d(0,0,0) rotateY(0deg);
+    }
+    to{
+        transform:translate3d(-50%,0,0) rotateY(35deg);
+    }
+}
+@keyframes MoveLeftSRev {
+    from{
+        margin-top: 0px;
+        opacity: 1;
+    }
+    to{
+        margin-top: 0px;
+        opacity: 1;
+    }
+}
+@keyframes MoveLeftCRev {
+    from{
+        transform:translate3d(-50%,0,0) rotateY(35deg);
+    }
+    to{
+        transform: translate3d(0,0,0) rotateY(0deg);
+    }
+}
+/*                                                                       */
+
+@keyframes RotateLeftS{
+    from{
+        opacity: 0;
+        margin-top: 20px;
+    }
+    to{
+        opacity: 1;
+        margin-top: 0px;
+    }
+}
+@keyframes RotateLeftC{
+    from{
+        transform: translate3d(0,0,0) scale(1) rotateY(0deg);
+    }
+    to{
+        transform: translate3d(-20%,0,0) scale(0.3, 0.4) rotateY(20deg);
+    }
+}
+@keyframes RotateLeftSRev{
+    from{
+        opacity: 1;
+        transform: scale(1);
+        margin-top: 0px;
+    }
+    to{
+        opacity: 1;
+        transform: scale(1);
+        margin-top: 0px;
+    }
+}
+@keyframes RotateLeftCRev{
+    from{
+        transform: translate3d(-20%,0,0) scale(0.3, 0.4) rotateY(20deg);
+    }
+    to{
+        transform: translate3d(0,0,0) scale(1) rotateY(0deg);
+    }
+}
+/*                                                                   */
+@keyframes MoveDownS{
+    from{
+        margin-top: -20px;
+        opacity: 0;
+    }
+    to{
+        margin-top: 0;
+        opacity: 1;
+    }
+}
+@keyframes MoveDownC{
+    from{
+        transform: translate3d(0,0,0) scale(1);
+    }
+    to{
+        transform: translate3d(0,50%,0) scale(0.5);
+    }
+}
+@keyframes MoveDownSRev{
+    from{
+        margin-top: 0;
+        opacity: 1;
+    }
+    to{
+        margin-top: 0;
+        opacity: 1;
+    }
+}
+@keyframes MoveDownCRev{
+    from{
+        transform: translate3d(0,50%,0) scale(0.5);
+    }
+    to{
+        transform: translate3d(0,0,0) scale(1);
+    }
+}
+/*                                                                   */
+@keyframes RotateTopS{
+    from{
+        margin-bottom: -20px;
+        opacity: 0;
+    }
+    to{
+        margin-bottom: 0;
+        opacity: 1;
+    }
+}
+@keyframes RotateTopC{
+    from{
+        transform: translate3d(0,0,0) rotateX(0deg) scale(1);
+    }
+    to{
+        transform: translate3d(0,-25%,0) rotateX(-45deg) scale(0.5);
+    }
+}
+@keyframes RotateTopSRev{
+    from{
+        margin-bottom: 0;
+        opacity: 1;
+    }
+    to{
+        margin-bottom: 0;
+        opacity: 1;
+    }
+}
+@keyframes RotateTopCRev{
+    from{
+        transform: translate3d(0,-25%,0) rotateX(-45deg) scale(0.5);
+    }
+    to{
+        transform: translate3d(0,0,0) rotateX(0deg) scale(1);
+    }
+}
+/*                                                                           */
+@keyframes LayDownS {
+    from{
+        opacity: 0;
+        margin-top: -300px;
+    }
+    to{
+        opacity: 1;
+        margin-top: 0;
+    }
+}
+@keyframes LayDownC {
+    from{
+        transform: translate3d(0,0,0) scale(1) rotateX(0deg);
+    }
+    to{
+        transform: translate3d(0,30%,0) scale(0.4) rotateX(85deg);
+    }
+}
+@keyframes LayDownSRev {
+    from{
+        opacity: 1;
+        margin-top: 0;
+    }
+    to{
+        opacity: 1;
+        margin-top: 0;
+    }
+}
+@keyframes LayDownCRev {
+    from{
+        transform: translate3d(0,30%,0) scale(0.4) rotateX(85deg);
+    }
+    to{
+        transform: translate3d(0,0,0) scale(1) rotateX(0deg);
+    }
+}

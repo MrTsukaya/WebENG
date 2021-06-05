@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Zięba Robert - 13390">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="animations.css">
+    <title>13390 - Sidebar animation</title>
+</head>
+<body>
+    <div id="sidebar">
+        <div class="sideOption"><img src="icons/home.png"/>home</div>
+        <div class="sideOption"><img src="icons/newspaper.png"/>news</div>
+        <div class="sideOption"><img src="icons/images.png"/>images</div>
+        <div class="sideOption"><img src="icons/uploads.png"/>uploads</div>
+        <div class="sideOption"><img src="icons/favorites.png"/>favorites</div>
+        <div class="sideOption"><img src="icons/email.png"/>messages</div>
+        <div class="sideOption"><img src="icons/padlock.png"/>security</div>
+    </div>
+    <div id="shadow" onclick="Reset()"></div>
+    <div id="container">
+        <nav><a href="../Sidebar/index.html">Sidebar &rarr;</a></nav>
+        <div id="h1">Perspective Page View Navigation</div>
+        <div class="break"></div>
+        <div id="h2">Transforms the page in 3D to reveal a menu</div>
+        <div id="allContent">
+            <div id="left">
+                <div class="button" onclick="pageAnimation()">show menu</div>
+                <br><br>
+                Click on this button to see the content being pushed away in 3D to reveal a navigation or other items.
+            </div>
+            <div id="center"></div>
+            <div id="right">
+                <div class="button buttonC" onclick="Active(this,'AIRBRN')">airbrn effect</div>
+                <div class="button buttonC" onclick="Active(this,'MoveLeft')">move left</div>
+                <div class="button buttonC" onclick="Active(this,'RotateLeft')">rotate left</div>
+                <div class="button buttonC" onclick="Active(this,'MoveDown')">move down</div>
+                <div class="button buttonC" onclick="Active(this,'RotateTop')">rotate top</div>
+                <div class="button buttonC" onclick="Active(this,'LayDown')">lay down</div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
